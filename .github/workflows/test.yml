@@ -23,5 +23,5 @@ jobs:
         run: echo "$COMMITS"
       - name: commit messages
         env:
-          CONTAINS_SKIP_TAG: ${{ contains(Join(github.event.commits.*.message, ', '), "#skip") }}
+          CONTAINS_SKIP_TAG: ${{ contains(Join(github.event.commits.*.message, ', '), '#skip') }}
         run: echo "$CONTAINS_SKIP_TAG"
