@@ -63,7 +63,7 @@ jobs:
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: ${{ job.status }}
-          title: "New version deployed successfully! :) View site [here](https://silent-hill-9183.fly.dev/)"
+          title: "New version deployed successfully! :) https://silent-hill-9183.fly.dev/"
           color: 0x008000
 
       - name: The build failed
