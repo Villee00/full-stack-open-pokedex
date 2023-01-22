@@ -1,8 +1,7 @@
 name: Pokedex website healthcheck
 on:
-  pull_request:
-    branches: [master]
-    types: [opened, synchronize]
+  schedule:
+    - cron: '30 18 * *'
 
 jobs:
   health-check-request:
@@ -11,7 +10,7 @@ jobs:
       - name: Run healthcheck on the website
         uses: jtalk/url-health-check-action@v3
         with:
-          url: https://silent-hill-9183.fly.dev/djawlkdjal
+          url: https://silent-hill-9183.fly.dev/awdadaw
           max-attempts: 3 # Optional, defaults to 1
           retry-all: false # Optional, defaults to "false"
 
