@@ -58,16 +58,16 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: The build succeeded
-        uses: sarisia/actions-status-discord@3c2354eb0e703acaac05a80c83bcc5b3fa30dba7
+        uses: sarisia/actions-status-discord@2947ebd8725337da402c454d25063e48e754f793
         if: success()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
           status: ${{ job.status }}
-          title: "New version deployed successfully! :)"
+          title: "New version deployed successfully! :) View site [here](https://silent-hill-9183.fly.dev/)"
           color: 0x008000
 
       - name: The build failed
-        uses: sarisia/actions-status-discord@3c2354eb0e703acaac05a80c83bcc5b3fa30dba7
+        uses: sarisia/actions-status-discord@2947ebd8725337da402c454d25063e48e754f793
         if: failure()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
