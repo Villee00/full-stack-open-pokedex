@@ -57,8 +57,8 @@ jobs:
     needs: [ simple_deployment_pipeline ]
     runs-on: ubuntu-20.04
     steps:
-      - name: The build succeeded
       - uses: sarisia/actions-status-discord@3c2354eb0e703acaac05a80c83bcc5b3fa30dba7
+      - name: The build succeeded
         if: success()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
@@ -67,7 +67,6 @@ jobs:
           color: 0x008000
 
       - name: The build failed
-      - uses: sarisia/actions-status-discord@3c2354eb0e703acaac05a80c83bcc5b3fa30dba7
         if: failure()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
