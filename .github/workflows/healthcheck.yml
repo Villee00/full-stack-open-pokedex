@@ -1,7 +1,7 @@
 name: Pokedex website healthcheck
 on:
   schedule:
-    - cron: '30 18 * * *'
+    - cron: '0/15 * * * *'
 
 jobs:
   health-check-request:
